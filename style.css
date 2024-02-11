@@ -1,0 +1,131 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #c060a1;
+}
+
+body.yes {
+    background-color: #ff8dc7;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExemVrZTB1N2I4YXhpMzFhdGp2Zzh6bHNlYnBydmRxdGR3MWNzNjBkYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26ufcYAkp8e66vanu/giphy.gif');
+    background-size: cover;
+}
+
+body.yes .confirm{
+    display: none;
+}
+
+body.yes .dialog {
+    display: block;
+}
+
+.heart {
+    background-color: red;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+}
+
+.heart::before
+.heart::after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin-left: absolute;
+}
+
+.heart::before{
+    top: -5px;
+    left: 0px;
+}
+
+.heart::after{
+    top: 0px;
+    left: 5px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.25);
+    }
+    40%  {
+        transform: scale(1.5);
+    }
+
+}
+.heart {
+    animation: heartbeat 1s infinite ease-in-out;
+}
+
+.confirm {
+    min-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #b0498d;
+    box-shadow: 3px 3px 3px #7e3a68;
+    border-radius: 5px;
+}
+
+.confirm_container{
+    padding: 10px;
+}
+
+.confirm_container .title {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+.confirm_actions{
+    display: flex;
+    column-gap: 10px;
+}
+
+.confirm_actions button{
+    width: 100%;
+    cursor: pointer;
+    font-size: 10px;
+    border: none;
+    padding: 5px;
+    color: #7e3a68;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.confirm_actions .btn-yes{
+    background-color: white;
+}
+
+.confirm_actions .btn-no{
+    position: relative;
+    background-color: #e97777;
+}
+
+.dialog {
+    display: none;
+    min-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f261ac;
+    box-shadow: 3px 3px 3px rgb(169, 69, 116);
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.dialog_container{
+    padding: 15px 5px;
+}
+
+.dialog_container p {
+    color: white;
+    text-align: center;
+}
